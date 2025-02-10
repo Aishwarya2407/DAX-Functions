@@ -1,0 +1,1 @@
+Cumulative_Total = Calculate(sum('tablename'sales), Filter(All('tablename'), 'tablename'date <= Max('tablename'date)))

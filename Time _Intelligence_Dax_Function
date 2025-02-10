@@ -1,0 +1,48 @@
+
+ --Time Intelligence DAX Functions :
+
+ 1) DATESBETWEEN   
+ --DATESBETWEEN(<Dates>, <StartDate>, <EndDate>)
+
+ Finding Sales Between Specific Dates:
+ 
+ CALCULATE(
+    SUM(DateTable[ListPrice]),
+    DATESBETWEEN(DateTable[SalesDate], "1-4-2017", "1-5-2017")
+)
+
+---------------------*--------------------------------------------*-------------
+2)DATESINPERIOD
+--DATESINPERIOD(<dates>, <start_date>, <number_of_intervals>, <interval>)
+ 
+Last 3 months :
+
+Calculate(sum('DateTable'[UnitPrice]), DATESINPERIOD('DateTable'[SalesDate],"01-10-2017",-3,MONTH))
+
+
+---------------------*--------------------------------------------*-------------
+3) FirstDate, LastDate:
+
+--FIRSTDATE(<dates>)
+FirstDate = FirstDate(DateTable[SalesDate])
+
+-----------*--------------------------------------------------------*----------------
+
+4) PreviousMonth :
+
+---PREVIOUSMONTH(<Dates>),  PREVIOUSDAY(<dates>), PREVIOUSYEAR(<Dates>)
+--- NextMonth(<Dates>), 
+
+------------*-------------------------------------------------------------*-----------
+
+
+5) TOTALMTD, TOTALQTD, TOTALYTD
+--TOTALMTD(<expression>,<dates>[,<filter>])
+
+------------*-------------------------------------------------------------*-----------
+
+6) STARTOFYEAR(<dates>), STARTOFMONTH(<dates>), STARTOFQUARTER(<dates>)
+
+---STARTOFQUARTER(<dates>)
+
+------------*-------------------------------------------------------------*-----------
